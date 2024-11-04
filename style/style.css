@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    border-bottom: #aaa solid 1px;
+    border-bottom: rgba(0, 0, 0, 0.3) solid 1px;
     box-shadow:0 6px 6px -6px #666;
 }
 
@@ -195,6 +195,8 @@ margin: 0 auto;
 
 }
 
+/*ABOUT ME*/
+
 section.me {
     display: flex;
     width: 100%;
@@ -221,17 +223,13 @@ img.portrait {
 .me aside h3 {
     font-size: 3rem;
     padding-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 .me aside p {
     font-size: 1.5rem;
 }
 
-section.gallery {
-    display: flex;
-    width: 100%;
-    min-height: 50vh; 
-    background-color: aliceblue;
-}
 
 section.motto {
     display: flex;
@@ -252,4 +250,45 @@ section.contact {
     width: 100%;
     min-height: 50vh;
     background-color: lightgray; 
+}
+
+/*GALLERY*/
+
+section.gallery {
+    display: flex;
+    width: 100%;
+    min-height: 50vh; 
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery div:first-child {
+    flex-basis: 100%;
+    line-height: 5rem;
+    padding: 5% 0 2% 0;
+    
+}
+.gallery div:first-child h3 {
+
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.images {
+     box-sizing: border-box;
+    flex-basis: 30%;
+    padding: 15px;
+}
+
+.images img {
+    width: 100%;
+    border: rgba(0, 0, 0, 0.4) solid 1px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.images img:hover {
+    transform: scale(1.05);
 }

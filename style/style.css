@@ -14,6 +14,12 @@ body {
     min-height: 150vh;
     font-size: 10px;
     min-width: 1028px;
+    background-color: #fafafa;
+}
+
+header {
+    border-bottom: #aaa solid 1px;
+    box-shadow:0 6px 6px -6px #666;
 }
 
 /* MENU */
@@ -186,23 +192,38 @@ align-items: center;
 min-height: 100vh;
 max-width: 1240px;
 margin: 0 auto;
+
 }
 
 section.me {
     display: flex;
     width: 100%;
     min-height: 50vh; 
-    background-color: lightgray; 
+    overflow: hidden;
+    align-items: center;
 }
 
 .me div {
     flex-basis: 50%;
-    /* background-color: blue; */
+    overflow: hidden;
+}
+img.portrait {
+    width: 100%;
+    padding: 10%;
 }
 
 .me aside {
     flex-basis: 50%;
-    /* background-color: rgb(152, 28, 69); */
+    text-align: justify;
+    padding: 10%;
+}
+
+.me aside h3 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.me aside p {
+    font-size: 1.5rem;
 }
 
 section.gallery {

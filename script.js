@@ -16,8 +16,8 @@ const grayImgHtml = document.querySelector('.gray');
 const h1Html = document.querySelector('.info h1');
 const h2Html = document.querySelector('.info h2');
 
-const colorImages = ['img/banner_girl_color.png', 'img/banner_boy_color.png'];
-const grayImages = ['img/banner_girl_bw.png', 'img/banner_boy_bw.png'];
+const colorImages = ['img/banner_girl_color.png', 'img/banner_laptop_color.png'];
+const grayImages = ['img/banner_girl_bw.png', 'img/banner_laptop_bw.png'];
 const h1Info = ['Front-End Developer', 'Portfolio projektów'];
 const h2Info = ['Margaret S.', 'aplikacji webowych'];
 

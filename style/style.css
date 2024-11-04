@@ -230,14 +230,6 @@ img.portrait {
     font-size: 1.5rem;
 }
 
-
-section.motto {
-    display: flex;
-    width: 100%;
-    min-height: 50vh;
-    background-color: lightgray; 
-}
-
 section.prices {
     display: flex;
     width: 100%;
@@ -261,16 +253,16 @@ section.gallery {
     overflow: hidden;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 5%;
 }
 
 .gallery div:first-child {
     flex-basis: 100%;
-    line-height: 5rem;
-    padding: 5% 0 2% 0;
+    padding: 3% 0 3% 0;
     
 }
 .gallery div:first-child h3 {
-
+    line-height: 5rem;
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
@@ -291,4 +283,43 @@ section.gallery {
 }
 .images img:hover {
     transform: scale(1.05);
+}
+
+/*MOTTO*/
+
+section.motto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 70vh;
+    background-color: lightgray; 
+    padding: 5% 0 5% 0;
+    background-image: url(../img/motto_image.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.motto h3 {
+    opacity: 1;
+    line-height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 3%;
+}
+.motto .text {
+   font-size: 2rem;
+   line-height: 4rem;
+   text-align: center;
+   font-style: italic;
+   width: 50%;
+   align-self: center;
+}
+.motto .author {
+    line-height: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
 }

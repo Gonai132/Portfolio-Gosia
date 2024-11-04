@@ -177,3 +177,58 @@ li:hover {
     }
 }
 
+/* MAIN */
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+max-width: 1240px;
+margin: 0 auto;
+}
+
+section.me {
+    display: flex;
+    width: 100%;
+    min-height: 50vh; 
+    background-color: lightgray; 
+}
+
+.me div {
+    flex-basis: 50%;
+    /* background-color: blue; */
+}
+
+.me aside {
+    flex-basis: 50%;
+    /* background-color: rgb(152, 28, 69); */
+}
+
+section.gallery {
+    display: flex;
+    width: 100%;
+    min-height: 50vh; 
+    background-color: aliceblue;
+}
+
+section.motto {
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    background-color: lightgray; 
+}
+
+section.prices {
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    background-color: aliceblue; 
+}
+
+section.contact {
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    background-color: lightgray; 
+}

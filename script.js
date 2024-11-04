@@ -9,7 +9,7 @@ menu.addEventListener("click", function () {
 
 // BANNER
 let activeElement = 0;
-const timeChange = 5000;
+const timeChange = 6000;
 
 const colorImgHtml = document.querySelector('.color');
 const grayImgHtml = document.querySelector('.gray');

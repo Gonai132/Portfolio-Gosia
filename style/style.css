@@ -24,6 +24,11 @@ header {
 
 h3 {
     color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 5rem;
+    letter-spacing: 5px;
 }
 
 /* MENU */
@@ -242,13 +247,6 @@ section.prices {
     background-color: aliceblue; 
 }
 
-section.contact {
-    display: flex;
-    width: 100%;
-    min-height: 50vh;
-    background-color: lightgray; 
-}
-
 /*GALLERY*/
 
 section.gallery {
@@ -340,11 +338,6 @@ section.packages {
 
 .packages h3 {
     flex-basis: 100%;
-    line-height: 5rem;
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
     padding-bottom: 4%;
 }
 .packages h3 i {
@@ -381,11 +374,11 @@ section.packages {
     z-index:auto;
    }
 
-   .column:hover {
+.column:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
- 
 .column img {
     display: block;
     width: 75%;
@@ -435,4 +428,66 @@ line-height: 30px;
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
+}
+
+/*CONTACT*/
+
+section.contact {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.contact h3 {
+    flex-basis: 100%;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.contact form {
+    flex-basis: 40%;
+    padding-right: 3%;
+}
+
+.contact input, .contact textarea  {
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    padding: 5px;
+    box-shadow: 0px 0px 3px 3px rgba(240, 240, 240, 0.5);
+    
+}
+.contact input {
+    line-height: 2rem;
+}
+
+.contact textarea {
+    height: 12rem;
+}
+.contact button {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    background-color: #999;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 5px;
+    padding: 5px;
+    padding-right: 3%;
+    border: 1px solid #666;
+    box-shadow: 0px 0px 3px 3px rgba(240, 240, 240, 0.5); 
+    transition: 0.2s;
+}
+.contact button:hover {
+    cursor: pointer;
+    background-color: #666;
+}
+.contact .socials {
+    flex-basis: 40%;
+    padding-left: 3%;
 }

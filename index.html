@@ -18,15 +18,16 @@
     <link rel="stylesheet" href="style/style.css">
     
 </head>
-<body>
+<body id="scrollUp">
     <header>
         <nav>
             <ul>
-                <li><a href=#>O Mnie</a></li>
-                <li><a href=#>Galeria</a></li>
-                <li><a href=#>Motto</a></li>
-                <li><a href=#>Pakiety</a></li>
-                <li><a href=#>Kontakt</a></li>
+                <li><a href=#scrollUp><i class="fas fa-arrow-up"></i></a></li>
+                <li><a href=#scrollMe>O Mnie</a></li>
+                <li><a href=#scrollGallery>Galeria</a></li>
+                <li><a href=#scrollMotto>Motto</a></li>
+                <li><a href=#scrollPackages>Pakiety</a></li>
+                <li><a href=#scrollContact>Kontakt</a></li>
             </ul> 
         </nav>
         <div class="menu">
@@ -45,7 +46,7 @@
         </section>
     </header>
     <main>
-        <section class="me">
+        <section class="me" id="scrollMe">
             <div>
                 <img class="portrait" src="img/me_girl.png" alt="girl at the desk">
             </div>
@@ -58,7 +59,7 @@
             </aside>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="scrollGallery">
             <div>
                 <h3>Galeria moich projektów</h3>
             </div>
@@ -79,68 +80,42 @@
             </div>
             <div class="images">
                 <a data-lightbox="gallery" data-title="Projekt strony 6" href="img/websites/web6.jpeg"><img src="img/websites/min6.jpg" alt="miniature"></a>
-            </div>  
+            </div>
+            <div id="scrollMotto"></div>  
         </section>
+        
         <section class="motto">
-            <h3>Moje motto życiowe</h3>
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet odit doloribus saepe temporibus libero delectus autem perferendis! Veniam, sit rerum distinctio suscipit nesciunt minima placeat. 
+            <h3>Moje motto w pracy</h3>
+            <p class="text">
+                ”Są dwa sposoby na tworzenie projektu oprogramowania. Jednym jest stworzenie go tak prostym, żeby nie było w nim żadnych oczywistych braków. Drugim stworzenie go tak skomplikowanym, żeby nie było w nim żadnych oczywistych braków”. 
             </p>
-            <p class="author">Adam Kowalski</p>
+            <p class="author">C.A.R. Hoare</p>
         </section>
-        <section class="packages">
+        <section class="packages" id="scrollPackages">
             <h3>Pakiety jakie oferuję <i class="fas fa-cube"></i></h3>
-            <div class="column">
+            <div class="column column1">
                 <h4>Pakiet Podstawowy:</h4>
                 <h4>Strona Wizytówka</h4>
-                <img src="img/package1.png" alt="">
+                <img src="img/package1.png" alt="logo package">
                 <p>Idealny dla małych firm i osób potrzebujących prostej strony informacyjnej</p>
-                <p>Zawartość pakietu:</p>
-                    <ul>
-                        <li>1-3 podstrony</li>
-                        <li>Responsywny design</li>
-                        <li>Podstawowa optymalizacja SEO</li>
-                        <li>Formularz kontaktowy</li>
-                        <li>Integracja z mediami społecznościowymi</li>
-                    </ul>
-                <p class="price"><span>1 500 - 2 500 PLN</span></p>
+                <p class="price"><span>Więcej informacji</span></p>
                </div>
-               <div class="column">
+               <div class="column column2">
                 <h4>Pakiet Standardowy:</h4>
                 <h4>Strona Firmowa</h4>
-                <img src="img/package2.png" alt="">
+                <img src="img/package2.png" alt="logo package 2">
                 <p>Dla firm potrzebujących rozbudowanej strony z możliwością zarządzania treścią</p>
-                <p>Zawartość pakietu:</p>
-                <ul>
-                    <li>Do 5-7 podstron</li>
-                    <li>System zarządzania treścią (CMS), np. WordPress</li>
-                    <li>Responsywny design</li>
-                    <li>Rozszerzona optymalizacja SEO</li>
-                    <li>Formularz kontaktowy i mapa Google</li>
-                    <li>Podstawowa analiza danych (np. Google Analytics)</li>
-                    <li>Integracja z mediami społecznościowymi</li>
-                </ul>
-                <p class="price"><span>3 000 - 5 000 PLN</span></p>
+                <p class="price"><span>Więcej informacji</span></p>
                </div>
-               <div class="column">
+               <div class="column column3">
                 <h4>Pakiet Premium:</h4>
                 <h4>Strona E-commerce</h4>
                 <img src="img/package3.png" alt="">
                 <p>Dla firm, które chcą sprzedawać produkty lub usługi online</p>
-                <p>Zawartość pakietu:</p>
-                <ul>
-                    <li>Do 10 podstron</li>
-                    <li>Sklep internetowy z koszykiem, płatnościami online, opcją logowania dla klientów</li>
-                    <li>System zarządzania treścią (CMS)</li>
-                    <li>Zaawansowana optymalizacja SEO</li>
-                    <li>Zabezpieczenia SSL</li>
-                    <li>Integracja z systemami płatności</li>
-                    <li>Analiza ruchu i sprzedaży</li>
-                    <li>Wsparcie techniczne przez pierwszy miesiąc</li>
-                </ul>
-                <p class="price"><span>6 000 - 12 000 PLN</span></p>
+                <p class="price"><span>Więcej informacji</span></p>
                </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="scrollContact">
             <h3>Skontaktuj się ze mną</h3>
             <form action="">
                 <input type="text" placeholder="Twoje imię i nazwisko">
@@ -161,6 +136,66 @@
         <p>&copy; Gonai 2024</p>
     </div>
    </footer>
+   <section class="modal-wrap">
+        <div class="modal">
+            <div class="modal1">
+                <h4>Pakiet Podstawowy: Strona Wizytówka</h4>
+                <img src="img/package1.png" alt="icon package 1">
+                <div class="aside">
+                    <p>Idealny dla małych firm i osób potrzebujących prostej strony informacyjnej</p>
+                    <p>Zawartość pakietu:</p>
+                        <ul>
+                            <li>1-3 podstrony</li>
+                            <li>Responsywny design</li>
+                            <li>Podstawowa optymalizacja SEO</li>
+                            <li>Formularz kontaktowy</li>
+                            <li>Integracja z mediami społecznościowymi</li>
+                            <li>1 500 - 2 500 PLN</li>
+                        </ul>
+                </div>
+                <span class="hide hide1">X</span>
+            </div>
+                <div class="modal2">
+                    <h4>Pakiet Standardowy: Strona Firmowa</h4>
+                    <img src="img/package2.png" alt="logo package 2">
+                    <div class="aside">
+                        <p>Dla firm potrzebujących rozbudowanej strony z możliwością zarządzania treścią</p>
+                        <p>Zawartość pakietu:</p>
+                            <ul>
+                                <li>Do 5-7 podstron</li>
+                                <li>System zarządzania treścią (CMS), np. WordPress</li>
+                                <li>Responsywny design</li>
+                                <li>Rozszerzona optymalizacja SEO</li>
+                                <li>Formularz kontaktowy i mapa Google</li>
+                                <li>Podstawowa analiza danych (np. Google Analytics)</li>
+                                <li>Integracja z mediami społecznościowymi</li>
+                                <li>3 000 - 5 000 PLN</li>
+                            </ul>
+                    </div>
+                    <span class="hide hide2">X</span>
+                </div>
+                <div class="modal3">
+                    <h4>Pakiet Premium: Strona E-commerce</h4>
+                    <img src="img/package3.png" alt="logo package 3">
+                    <div class="aside">
+                        <p>Dla firm, które chcą sprzedawać produkty lub usługi online</p>
+                        <p>Zawartość pakietu:</p>
+                            <ul>
+                                <li>Do 10 podstron</li>
+                                <li>Sklep internetowy z koszykiem, płatnościami online, opcją logowania dla klientów</li>
+                                <li>System zarządzania treścią (CMS)</li>
+                                <li>Zaawansowana optymalizacja SEO</li>
+                                <li>Zabezpieczenia SSL</li>
+                                <li>Integracja z systemami płatności</li>
+                                <li>Analiza ruchu i sprzedaży</li>
+                                <li>Wsparcie techniczne przez pierwszy miesiąc</li>
+                                <li>6 000 - 12 000 PLN</li>
+                            </ul>
+                    </div>
+                    <span class="hide hide3">X</span>
+                </div>
+        </div>
+   </section>
    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="script.js"></script>
 </body>

@@ -1,4 +1,5 @@
 // MENU
+
 const menu = document.querySelector(".menu");
 const nav = document.querySelector("nav");
 
@@ -8,6 +9,7 @@ menu.addEventListener("click", function () {
 })
 
 // BANNER
+
 let activeElement = 0;
 const timeChange = 6000;
 
@@ -33,4 +35,63 @@ function changeElement() {
 
 }
 
-setInterval(changeElement, timeChange)
+// MODAL 
+
+setInterval(changeElement, timeChange);
+
+const button1 = document.querySelector(".column1 .price span");
+const button2 = document.querySelector(".column2 .price span");
+const button3 = document.querySelector(".column3 .price span");
+
+const modalWrap = document.querySelector(".modal-wrap");
+const modal1 = document.querySelector(".modal1");
+const modal2 = document.querySelector(".modal2");
+const modal3 = document.querySelector(".modal3");
+const main = document.querySelector("main");
+const header = document.querySelector("header");
+
+const spanHide1 = document.querySelector(".hide1");
+const spanHide2 = document.querySelector(".hide2");
+const spanHide3 = document.querySelector(".hide3");
+
+button1.addEventListener("click", function () {
+    modalWrap.classList.add("active");
+    modal1.classList.add("active");
+    main.classList.add("blur");
+    header.classList.add("blur");
+})
+
+spanHide1.addEventListener("click", function () {
+    modalWrap.classList.remove("active");
+    modal1.classList.remove("active");
+    main.classList.remove("blur");
+    header.classList.remove("blur");
+})
+
+button2.addEventListener("click", function () {
+    modalWrap.classList.add("active");
+    modal2.classList.add("active");
+    main.classList.add("blur");
+    header.classList.add("blur");
+})
+
+spanHide2.addEventListener("click", function () {
+    modalWrap.classList.remove("active");
+    modal2.classList.remove("active");
+    main.classList.remove("blur");
+    header.classList.remove("blur");
+})
+
+button3.addEventListener("click", function () {
+    modalWrap.classList.add("active");
+    modal3.classList.add("active");
+    main.classList.add("blur");
+    header.classList.add("blur");
+})
+
+spanHide3.addEventListener("click", function () {
+    modalWrap.classList.remove("active");
+    modal3.classList.remove("active");
+    main.classList.remove("blur");
+    header.classList.remove("blur");
+})

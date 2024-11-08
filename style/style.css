@@ -465,6 +465,7 @@ section.contact {
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 5%;
+    position: relative;
 }
 
 .contact h3 {
@@ -484,6 +485,7 @@ section.contact {
     font-size: 1.3rem;
     padding: 5px;
     box-shadow: 0px 0px 3px 3px rgba(240, 240, 240, 0.5);
+    resize: vertical;
     
 }
 .contact input {
@@ -533,6 +535,28 @@ section.contact {
     color: #555;
 }
 
+.msg-status {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    padding: 10px;
+    min-width: 300px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.msg-status.success {
+    display: flex;
+    background-color: lightgreen;
+}
+
+.msg-status.error {
+    display: flex;
+    background-color: lightcoral;
+}
 /*FOOTER*/
 
 footer {

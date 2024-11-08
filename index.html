@@ -119,17 +119,18 @@
         </section>
         <section class="contact" id="scrollContact">
             <h3>Skontaktuj się ze mną</h3>
-            <form action="">
-                <input type="text" placeholder="Twoje imię i nazwisko">
-                <input type="text" placeholder="Email">
-                <textarea name="" id="" placeholder="Wiadomość"></textarea>
+            <form action="mail.php" method="post">
+                <input type="text" placeholder="Twoje imię i nazwisko" name="name" required>
+                <input type="text" placeholder="Email" name="email" required>
+                <textarea name="msg" id="msg" placeholder="Wiadomość" required></textarea>
                 <button>Wyślij wiadomość</button>
             </form>
+            <p class="msg-status"></p>
             <div class="socials">
                 <div class="social"><i class="fas fa-envelope"></i><span>kontakt@gosia_portfolio.pl</span></div>
                 <div class="social"><i class="fas fa-phone"></i><span>921-456-789</span></div>
-                <div class="social"><a href=https://pl-pl.facebook.com/”><i class="fab fa-facebook"></i><span>Margaret Web Dev</span></a></div>
-                <div class="social"><a href="https://www.linkedin.com/?trk=guest_homepage-basic_nav-header-logo"><i class="fab fa-linkedin"></i><span>Margaret S.</span></a></div>
+                <div class="social"><a href=https://pl-pl.facebook.com/” target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i><span>Margaret Web Dev</span></a></div>
+                <div class="social"><a href="https://www.linkedin.com/?trk=guest_homepage-basic_nav-header-logo" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>Margaret S.</span></a></div>
             </div>
         </section>
     </main>

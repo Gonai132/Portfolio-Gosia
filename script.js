@@ -11,7 +11,9 @@ menu.addEventListener("click", function () {
 // BANNER
 
 let activeElement = 0;
-const timeChange = 6000;
+const timeChange = 5000; 
+let lastUpdateTime = Date.now(); 
+let animationFrameId;
 
 const colorImgHtml = document.querySelector('.color');
 const grayImgHtml = document.querySelector('.gray');
@@ -23,21 +25,36 @@ const grayImages = ['img/banner_girl_bw.png', 'img/banner_laptop_bw.png'];
 const h1Info = ['Front-End Developer', 'Portfolio projektów'];
 const h2Info = ['Margaret S.', 'aplikacji webowych'];
 
-function changeElement() {
- activeElement++;
- if (activeElement == colorImages.length) {
-  activeElement = 0;
- }
- colorImgHtml.src = colorImages[activeElement];
- grayImgHtml.src = grayImages[activeElement];
- h1Html.textContent = h1Info[activeElement];
- h2Html.textContent = h2Info[activeElement];
 
+function changeElement() {
+    activeElement = (activeElement + 1) % colorImages.length;
+    colorImgHtml.src = colorImages[activeElement];
+    grayImgHtml.src = grayImages[activeElement];
+    h1Html.textContent = h1Info[activeElement];
+    h2Html.textContent = h2Info[activeElement];
 }
 
-// MODAL 
+function animationLoop() {
+    const currentTime = Date.now();
+    if (currentTime - lastUpdateTime >= timeChange) {
+        changeElement();
+        lastUpdateTime = currentTime;
+    }
+    animationFrameId = requestAnimationFrame(animationLoop);
+}
 
-setInterval(changeElement, timeChange);
+animationLoop();
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        lastUpdateTime = Date.now(); 
+        animationLoop(); 
+    } else {
+        cancelAnimationFrame(animationFrameId); 
+    }
+});
+
+// MODAL 
 
 const button1 = document.querySelector(".column1 .price span");
 const button2 = document.querySelector(".column2 .price span");
@@ -99,25 +116,25 @@ spanHide3.addEventListener("click", function () {
 // CONTACT MAIL
 
 const msgStatus = document.querySelector(".msg-status");
+const urlParams = new URLSearchParams(window.location.search);
+const mailStatus = urlParams.get("mail_status");
 
-console.log(document.location.search);
-
-if (document.location.search === '?mail_status=sent') {
-    msgStatus.classList.add("success")
-    msgStatus.textContent = "Wiadomość wysłana!"
+if (mailStatus === "sent") {
+    msgStatus.classList.add("success");
+    msgStatus.textContent = "Wiadomość wysłana!";
 
     setTimeout(() => {
-        msgStatus.classList.remove("success")
+        msgStatus.classList.remove("success");
+        msgStatus.textContent = "";
     }, 3000);
 }
 
-if (document.location.search === '?mail_status=error') {
-    msgStatus.classList.add("error")
-    msgStatus.textContent = "Wystąpił błąd..."
+if (mailStatus === "error") {
+    msgStatus.classList.add("error");
+    msgStatus.textContent = "Wystąpił błąd...";
 
     setTimeout(() => {
-        msgStatus.classList.remove("error")
+        msgStatus.classList.remove("error");
+        msgStatus.textContent = "";
     }, 3000);
 }
-
-

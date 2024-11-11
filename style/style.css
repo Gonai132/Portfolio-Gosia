@@ -413,6 +413,7 @@ section.packages {
 .packages h3 {
     flex-basis: 100%;
     padding-bottom: 4%;
+    transition: 1.5s;
 }
 .packages h3 i {
     font-size: 3rem;
@@ -498,15 +499,31 @@ section.packages {
    }
 
 p.price {
-flex-grow: 1;
-line-height: 30px;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-min-width: 70%;
-align-self: center;
-cursor: pointer;
+    flex-grow: 1;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 70%;
+    align-self: center;
+    cursor: pointer;
 }
+
+.packages .column1, .packages .column2, .packages .column3 {
+    transition: 1.5s;
+}
+
+.move9 {
+    transform: translateX(-130%);
+}
+
+.move10 {
+    transform: translateX(-400%);
+}
+.move11 {
+    transform: translateX(0%);
+}
+
 
 /*CONTACT*/
 
@@ -518,12 +535,14 @@ section.contact {
     justify-content: center;
     padding-bottom: 5%;
     position: relative;
+    overflow: hidden;
 }
 
 .contact h3 {
     flex-basis: 100%;
     text-align: center;
     padding-bottom: 3%;
+    transition: 1s;
 }
 
 .contact form {
@@ -609,6 +628,36 @@ section.contact {
     display: flex;
     background-color: lightcoral;
 }
+
+.contact form {
+    transition: 1s;
+}
+
+.contact .socials {
+    transition: 1s;
+}
+
+.move12 {
+    transform: translateY(-300%);
+}
+
+.move13 {
+    transform: translateY(0);
+}
+
+.move14 {
+    transform: translateX(-120%);
+}
+
+.move15 {
+    transform: translateX(120%);
+}
+
+.move16 {
+    transform: translateX(0);
+}
+
+
 /*FOOTER*/
 
 footer {

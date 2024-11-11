@@ -180,7 +180,6 @@ function changeClass2() {
     box3.classList.add("move1gallery");
 }
 
-
 // ANIMATIONS MOTTO
 
 let box5 = document.querySelector(".motto h3");
@@ -210,5 +209,62 @@ function changeClass3() {
     box8.classList.remove("move7");
     box8.classList.add("move8");
 }
+
+// ANIMATIONS PACKAGES
+
+let box9 = document.querySelector(".packages h3");
+let box10 = document.querySelector(".packages .column1");
+let box11 = document.querySelector(".packages .column2");
+let box12 = document.querySelector(".packages .column3");
+
+setInterval(function() {console.log(box9.getBoundingClientRect().top)}), 1000;
+
+box9.classList.add("move9");
+box10.classList.add("move10");
+box11.classList.add("move10");
+box12.classList.add("move10");
+
+setInterval(function(){
+    box9.getBoundingClientRect().top <= 500 ?
+    changeClass4(): null
+});
+
+function changeClass4() {
+    box9.classList.remove("move9");
+    box9.classList.add("move11");
+    box10.classList.remove("move10");
+    box10.classList.add("move11");
+    box11.classList.remove("move10");
+    box11.classList.add("move11");
+    box12.classList.remove("move10");
+    box12.classList.add("move11");
+}
+
+// ANIMATIONS CONTACT
+
+let box13 = document.querySelector(".contact h3");
+let box14 = document.querySelector(".contact form");
+let box15 = document.querySelector(".contact .socials");
+
+setInterval(function() {console.log(box13.getBoundingClientRect().top)}), 1000;
+
+box13.classList.add("move12");
+box14.classList.add("move14");
+box15.classList.add("move15");
+
+setInterval(function(){
+    box13.getBoundingClientRect().top <= 100 ?
+    changeClass5(): null
+});
+
+function changeClass5() {
+    box13.classList.remove("move12");
+    box13.classList.add("move13");
+    box14.classList.remove("move14");
+    box14.classList.add("move16");
+    box15.classList.remove("move15");
+    box15.classList.add("move16");
+}
+
 
 

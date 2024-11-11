@@ -259,6 +259,15 @@ img.portrait {
 
 }
 
+.me aside h3 {
+    padding-bottom: 1rem;
+    text-align: left;
+}
+.me aside p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
 .move1 {
     transform: translateX(0%);
 }
@@ -269,18 +278,7 @@ img.portrait {
 
 .move3 {
     transform: translateX(-120%);
-
 }
-
-.me aside h3 {
-    padding-bottom: 1rem;
-    text-align: left;
-}
-.me aside p {
-    font-size: 1.6rem;
-    line-height: 2.2rem;
-}
-
 
 /*GALLERY*/
 
@@ -292,6 +290,9 @@ section.gallery {
     flex-wrap: wrap;
     justify-content: center;
     padding: 5% 0 7% 0;
+}
+.gallery h3 {
+    transition: 1s;
 }
 
 .gallery div:first-child {
@@ -330,6 +331,14 @@ section.gallery {
     flex-basis: 100%;
 }
 
+.move1gallery {
+    transform: translateY(0%);
+}
+
+.move2gallery {
+    transform: translateY(-400%);
+}
+
 /*MOTTO*/
 
 section.motto {
@@ -344,6 +353,10 @@ section.motto {
     background-attachment: fixed;
 }
 
+.motto {
+    transition: 2s;
+}
+
 .motto h3 {
     line-height: 5rem;
     font-size: 3rem;
@@ -351,6 +364,7 @@ section.motto {
     text-transform: uppercase;
     letter-spacing: 5px;
     padding-bottom: 3%;
+    transition: 1s;
 }
 .motto .text {
    font-size: 2rem;
@@ -359,11 +373,29 @@ section.motto {
    font-style: italic;
    width: 50%;
    align-self: center;
+   transition: 1s;
 }
 .motto .author {
     line-height: 4rem;
     font-size: 1.5rem;
     text-align: center;
+    transition: 1s;
+}
+
+.move4 {
+    transform: scale(1);
+}
+
+.move5 {
+    transform: scale(0);
+}
+
+.move6 {
+    opacity: 1;
+}
+
+.move7 {
+    opacity: 0;
 }
 
 /*PACKAGES*/

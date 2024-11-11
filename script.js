@@ -146,9 +146,7 @@ let box2 = document.querySelector(".me aside");
 
 setInterval(function() {console.log(box2.getBoundingClientRect().top)}), 1000;
 
-box1.classList.remove("move1");
 box1.classList.add("move3");
-box2.classList.remove("move1");
 box2.classList.add("move2");
 
 setInterval(function(){
@@ -162,6 +160,55 @@ function changeClass() {
     box2.classList.remove("move2");
     box2.classList.add("move1");
     
+}
+
+// ANIMATIONS GALLERY
+
+let box3 = document.querySelector(".gallery h3");
+
+setInterval(function() {console.log(box3.getBoundingClientRect().top)}), 1000;
+
+box3.classList.add("move2gallery");
+
+setInterval(function(){
+    box3.getBoundingClientRect().top <= 500 ?
+    changeClass2(): null
+});
+
+function changeClass2() {
+    box3.classList.remove("move2gallery");
+    box3.classList.add("move1gallery");
+}
+
+
+// ANIMATIONS MOTTO
+
+let box5 = document.querySelector(".motto h3");
+let box6 = document.querySelector(".motto p");
+let box7 = document.querySelector(".motto p.author");
+let box8 = document.querySelector(".motto");
+
+setInterval(function() {console.log(box5.getBoundingClientRect().top)}), 1000;
+
+box5.classList.add("move5");
+box6.classList.add("move5");
+box7.classList.add("move5");
+box8.classList.add("move7");
+
+setInterval(function(){
+    box5.getBoundingClientRect().top <= 800 ?
+    changeClass3(): null
+});
+
+function changeClass3() {
+    box5.classList.remove("move5");
+    box5.classList.add("move4");
+    box6.classList.remove("move5");
+    box6.classList.add("move4");
+    box7.classList.remove("move5");
+    box7.classList.add("move4");
+    box8.classList.remove("move7");
+    box8.classList.add("move8");
 }
 
 

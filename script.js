@@ -165,19 +165,44 @@ function changeClass() {
 // ANIMATIONS GALLERY
 
 let box3 = document.querySelector(".gallery h3");
+let box3a = document.querySelector(".gallery .images:nth-of-type(2)");
+let box3b = document.querySelector(".gallery .images:nth-of-type(3)");
+let box3c = document.querySelector(".gallery .images:nth-of-type(4)");
+let box3d = document.querySelector(".gallery .images:nth-of-type(5)");
+let box3e = document.querySelector(".gallery .images:nth-of-type(6)");
+let box3f = document.querySelector(".gallery .images:nth-of-type(7)");
 
 setInterval(function() {console.log(box3.getBoundingClientRect().top)}), 1000;
 
 box3.classList.add("move2gallery");
+box3a.classList.add("hide1");
+box3b.classList.add("hide1");
+box3c.classList.add("hide1");
+box3d.classList.add("hide1");
+box3e.classList.add("hide1");
+box3f.classList.add("hide1");
+
 
 setInterval(function(){
-    box3.getBoundingClientRect().top <= 500 ?
+    box3.getBoundingClientRect().top <= 300 ?
     changeClass2(): null
 });
 
 function changeClass2() {
     box3.classList.remove("move2gallery");
     box3.classList.add("move1gallery");
+    box3a.classList.remove("hide1");
+    box3a.classList.add("hide2");
+    box3b.classList.remove("hide1");
+    box3b.classList.add("hide2");
+    box3c.classList.remove("hide1");
+    box3c.classList.add("hide2");
+    box3d.classList.remove("hide1");
+    box3d.classList.add("hide2");
+    box3e.classList.remove("hide1");
+    box3e.classList.add("hide2");
+    box3f.classList.remove("hide1");
+    box3f.classList.add("hide2");
 }
 
 // ANIMATIONS MOTTO

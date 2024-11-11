@@ -138,3 +138,30 @@ if (mailStatus === "error") {
         msgStatus.textContent = "";
     }, 3000);
 }
+
+// ANIMATIONS ME
+
+let box1 = document.querySelector(".me div");
+let box2 = document.querySelector(".me aside");
+
+setInterval(function() {console.log(box2.getBoundingClientRect().top)}), 1000;
+
+box1.classList.remove("move1");
+box1.classList.add("move3");
+box2.classList.remove("move1");
+box2.classList.add("move2");
+
+setInterval(function(){
+    box2.getBoundingClientRect().top <= 500 ?
+    changeClass(): null
+});
+
+function changeClass() {
+    box1.classList.remove("move3");
+    box1.classList.add("move1");
+    box2.classList.remove("move2");
+    box2.classList.add("move1");
+    
+}
+
+

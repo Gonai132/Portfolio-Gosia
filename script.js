@@ -67,7 +67,7 @@ const modal3 = document.querySelector(".modal3");
 const main = document.querySelector("main");
 const header = document.querySelector("header");
 
-const spanHide1 = document.querySelector(".hide1");
+const spanHide1 = document.querySelector(".hide11");
 const spanHide2 = document.querySelector(".hide2");
 const spanHide3 = document.querySelector(".hide3");
 

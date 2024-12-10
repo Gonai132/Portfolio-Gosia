@@ -943,6 +943,35 @@ span.hide:hover {
         font-size: 1.6rem;
     }
 
+    /*MODAL*/
+
+    .modal {
+        width: 80%;
+        max-width: 1024px;
+        height: 80%;
+        min-width: 640px;
+    }
+
+    .modal img {
+        flex-basis: 80%;
+        width: 100%;
+    }
+
+    .modal .aside {
+        flex-basis: 80%;
+        padding: 10px;
+        padding-left: 10px;
+    }
+
+    .modal h4 {
+        padding-bottom: 20px;
+    }
+
+    .modal p:first-child {
+        text-align: center;
+        padding-top: 20px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -956,12 +985,8 @@ span.hide:hover {
     }
 
     .menu {
-        right: 8px;
-        top: 14px;
-    }
-
-    .menu i {
-        font-size: 3.3em;
+        right: 10px;
+        top: 16px;
     }
 
     .menu {
@@ -976,12 +1001,12 @@ span.hide:hover {
     }
 
     nav.on {
-        height: 50%;
+        height: 60%;
         overflow: scroll;
     }
 
     .menu.on {
-        top: 14px;
+        top: 16px;
     }
 
 
@@ -1012,7 +1037,7 @@ span.hide:hover {
     /* BANNER */
 
     .member img.color {
-        height: 45%;
+        height: 55%;
         right: -25%;
     }
 
@@ -1025,7 +1050,7 @@ span.hide:hover {
     }
 
     .member .info {
-        top: 13%;
+        top: 20%;
         padding-left: 3%;
         padding-right: 3%;
     }
@@ -1139,6 +1164,11 @@ span.hide:hover {
         padding-right: 0;
     }
 
+    .contact .social span {
+        font-size: 1.6rem;
+        color: #333;
+    }
+
     /*MODAL*/
 
     .modal {
@@ -1177,5 +1207,4 @@ span.hide:hover {
     .modal p:nth-child(2) {
         font-size: 1.4rem;
     }
-
 }
